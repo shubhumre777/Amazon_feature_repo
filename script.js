@@ -61,8 +61,6 @@ const products = [
   }
 ];
 
-const GEMINI_API_KEY = "AIzaSyBl-0xuiuGNbOkkkLQfz_aq8_h14Jlk3dE";
-
 function renderProducts(filtered = products) {
   const container = document.getElementById("productList");
   container.innerHTML = "";
@@ -104,7 +102,6 @@ function showPopup() {
 
 window.onload = showPopup;
 
-
 async function handleAssistant() {
   const input = document.getElementById("assistantInput").value.trim();
   const responseDiv = document.getElementById("assistantResponse");
@@ -112,16 +109,17 @@ async function handleAssistant() {
 
   responseDiv.innerHTML = "Thinking...";
 
-  const result = await fetch(
-    "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=" + GEMINI_API_KEY,
-    {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ contents: [{ parts: [{ text: input }] }] })
-    }
-  );
+  const filteredProducts = products.filter(p => p.name.toLowerCase().includes(input.toLowerCase()));
 
-  const data = await result.json();
-  const reply = data.candidates?.[0]?.content?.parts?.[0]?.text;
-  responseDiv.innerHTML = reply || "Sorry, something went wrong.";
+  if (filteredProducts.length > 0) {
+    const product = filteredProducts[0];  // Get the first matching product
+    responseDiv.innerHTML = `
+      <h5>Suggestion:</h5>
+      <p>We found the product: <strong>${product.name}</strong></p>
+      <img src="${product.image}" alt="${product.name}" style="width:100px; border-radius:8px;">
+      <p><a href="${product.availableOffline}" target="_blank" class="btn btn-outline-primary btn-sm">Buy Offline</a></p>
+    `;
+  } else {
+    responseDiv.innerHTML = "Sorry, no matching product found.";
+  }
 }

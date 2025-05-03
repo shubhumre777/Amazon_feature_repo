@@ -97,7 +97,7 @@ function showPopup() {
   const product = products[Math.floor(Math.random() * products.length)];
   const popup = document.getElementById("popup");
   const content = document.getElementById("popupContent");
-  content.innerHTML = `<h5>Trending Now: ${product.name}</h5><img src="${product.image}" alt="${product.name}" style="width:100px; border-radius:8px;">`;
+  content.innerHTML = `<h5>Trending In Your Area: ${product.name}</h5><img src="${product.image}" alt="${product.name}" style="width:100px; border-radius:8px;">`;
   popup.classList.remove("hidden");
   setTimeout(() => popup.classList.add("hidden"), 4000);
 }

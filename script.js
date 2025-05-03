@@ -47,20 +47,21 @@ const products = [
     description: "Ergonomic and foldable stand",
     availableOffline: "https://maps.app.goo.gl/4Lhvc6jL1YzJzyLZ7"
   },
-   {
+  {
     name: "Amazon Fire TV Stick HD",
     image: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQrnHMLXXMQPaaG-t0_BGJYhzMQuyPOfuynfCyh1qkJ2vZ1PZl0pJZL_E_7jgvJ9ooJOWH3lACvtOnDQVsNJH0iMZh8B6yeyg-glw-OOUBU-3_jsBufS7ijAw",
     description: "Enjoy the OTT's",
     availableOffline: "https://maps.app.goo.gl/PxKMh3PR3U4SFXjB9"
   },
-    {
+  {
     name: "Cello Bottle",
     image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSRqU5Vimhhzvp6Qen1MeaeqRbR-OuMSOYv56QRGNfvGY4p0ne0gPZLDMDDoZ17ZHiOI6IMX3OLViZULE2ZMU92GerN9gGYLB3VAKI1dbsJ",
     description: "Crystal clear water",
     availableOffline: "https://maps.app.goo.gl/SB2XKLbn7kz8QcC37"
-  } 
-  
+  }
 ];
+
+const GEMINI_API_KEY = "AIzaSyBl-0xuiuGNbOkkkLQfz_aq8_h14Jlk3dE";
 
 function renderProducts(filtered = products) {
   const container = document.getElementById("productList");
@@ -92,16 +93,23 @@ function toggleAI() {
   box.style.display = box.style.display === "block" ? "none" : "block";
 }
 
-function handleAssistant() {
-  const query = document.getElementById("assistantInput").value.toLowerCase();
+async function handleAssistant() {
+  const input = document.getElementById("assistantInput").value.trim();
   const responseDiv = document.getElementById("assistantResponse");
-  let found = false;
-  for (const p of products) {
-    if (query.includes(p.name.toLowerCase()) || query.includes("trending") && p.name === "Wireless Earbuds") {
-      responseDiv.innerHTML = `<strong>${p.name}:</strong> ${p.description}<br><img src="${p.image}" width="100"/><br><a href="${p.availableOffline}" target="_blank">Available here</a>`;
-      found = true;
-      break;
+  if (!input) return;
+
+  responseDiv.innerHTML = "Thinking...";
+
+  const result = await fetch(
+    "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=" + GEMINI_API_KEY,
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ contents: [{ parts: [{ text: input }] }] })
     }
-  }
-  if (!found) responseDiv.innerHTML = "Sorry, I couldn’t find anything helpful.";
+  );
+
+  const data = await result.json();
+  const reply = data.candidates?.[0]?.content?.parts?.[0]?.text;
+  responseDiv.innerHTML = reply || "Sorry, something went wrong.";
 }

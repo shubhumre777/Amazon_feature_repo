@@ -1,4 +1,3 @@
-
 const products = [
   {
     name: "Wireless Earbuds",
@@ -29,6 +28,24 @@ const products = [
     image: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSuPcvWkkyR5P4MVAx62G12qImBbAkmJe02xq4WH1akSPkP3ysCH__o-m2O4l-VwJB3Gi0dp5oz9l1-aGqRngu6hNCtdwtLsgj-85doW7jbHfCENnjClasAnlA",
     description: "Trending sneakers",
     availableOffline: "https://www.bata.in/"
+  },
+  {
+    name: "Smart Watch",
+    image: "https://m.media-amazon.com/images/I/61ZkF1qU+sL._AC_UF1000,1000_QL80_.jpg",
+    description: "Track your fitness in style",
+    availableOffline: "https://www.croma.com/"
+  },
+  {
+    name: "Bluetooth Speaker",
+    image: "https://m.media-amazon.com/images/I/71cjS1A8sML._AC_SL1500_.jpg",
+    description: "Portable sound companion",
+    availableOffline: "https://www.reliancedigital.in/"
+  },
+  {
+    name: "Laptop Stand",
+    image: "https://m.media-amazon.com/images/I/71LZfbD9oOL._SL1500_.jpg",
+    description: "Ergonomic and foldable stand",
+    availableOffline: "https://www.amazon.in/"
   }
 ];
 

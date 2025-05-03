@@ -28,8 +28,40 @@ const products = [
     image: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSuPcvWkkyR5P4MVAx62G12qImBbAkmJe02xq4WH1akSPkP3ysCH__o-m2O4l-VwJB3Gi0dp5oz9l1-aGqRngu6hNCtdwtLsgj-85doW7jbHfCENnjClasAnlA",
     description: "Trending sneakers",
     availableOffline: "https://maps.app.goo.gl/UarqFHJzD53asV8s8"
+  },
+  {
+    name: "Smart Watch",
+    image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQSqe0_1U3Cg9y0YIXRx-4H8dSeUkdCtpNHxCHQer9pruODM5MwuWN9VQ9y4N7XFCZtP8AHpkU2wZqUd7xATSzB1F94UgpArKDqpds24CNnmD0iavogQcjO",
+    description: "Track your fitness in style",
+    availableOffline: "https://maps.app.goo.gl/6PQnjeQfutzPgkDc6"
+  },
+  {
+    name: "Bluetooth Speaker",
+    image: "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTNBd_jAqqdYf4mYUdNhQCbQUk3eObGuyHeUQ9Oj2dr0vPXfFm6aIhc0j20bG0YYKCqOuidK4ZumgjSMLiwXVJVzrTKknWCQxp8jsTIlyM5P65cLoM4Qw079A",
+    description: "Portable sound companion",
+    availableOffline: "https://maps.app.goo.gl/wRWyURfWmAC38Hvs8"
+  },
+  {
+    name: "Laptop Stand",
+    image: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTN2Uths8tmdH_IprYkuWdlUTHnjyI0gg1o2Rd1oBahbuJGUCXHf4pdb8wbaSXE_J_4d0t_-n5XMcQhaAMH0Hbafw5L44n5COQLaHPzNWPtLbPQ4BP0_IzR",
+    description: "Ergonomic and foldable stand",
+    availableOffline: "https://maps.app.goo.gl/4Lhvc6jL1YzJzyLZ7"
+  },
+  {
+    name: "Amazon Fire TV Stick HD",
+    image: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQrnHMLXXMQPaaG-t0_BGJYhzMQuyPOfuynfCyh1qkJ2vZ1PZl0pJZL_E_7jgvJ9ooJOWH3lACvtOnDQVsNJH0iMZh8B6yeyg-glw-OOUBU-3_jsBufS7ijAw",
+    description: "Enjoy the OTT's",
+    availableOffline: "https://maps.app.goo.gl/PxKMh3PR3U4SFXjB9"
+  },
+  {
+    name: "Cello Bottle",
+    image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSRqU5Vimhhzvp6Qen1MeaeqRbR-OuMSOYv56QRGNfvGY4p0ne0gPZLDMDDoZ17ZHiOI6IMX3OLViZULE2ZMU92GerN9gGYLB3VAKI1dbsJ",
+    description: "Crystal clear water",
+    availableOffline: "https://maps.app.goo.gl/SB2XKLbn7kz8QcC37"
   }
 ];
+
+const GEMINI_API_KEY = "AIzaSyBl-0xuiuGNbOkkkLQfz_aq8_h14Jlk3dE";
 
 function renderProducts(filtered = products) {
   const container = document.getElementById("productList");
@@ -68,13 +100,16 @@ async function handleAssistant() {
 
   responseDiv.innerHTML = "Thinking...";
 
-  const result = await fetch("https://api.codex.jaagrav.in", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ prompt: input })
-  });
+  const result = await fetch(
+    "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=" + GEMINI_API_KEY,
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ contents: [{ parts: [{ text: input }] }] })
+    }
+  );
 
   const data = await result.json();
-  const reply = data.text;
+  const reply = data.candidates?.[0]?.content?.parts?.[0]?.text;
   responseDiv.innerHTML = reply || "Sorry, something went wrong.";
 }

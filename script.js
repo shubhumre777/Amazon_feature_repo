@@ -58,7 +58,7 @@ const products = [
     image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSRqU5Vimhhzvp6Qen1MeaeqRbR-OuMSOYv56QRGNfvGY4p0ne0gPZLDMDDoZ17ZHiOI6IMX3OLViZULE2ZMU92GerN9gGYLB3VAKI1dbsJ",
     description: "Crystal clear water",
     availableOffline: "https://maps.app.goo.gl/SB2XKLbn7kz8QcC37"
-  },
+  } 
   
 ];
 

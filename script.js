@@ -109,16 +109,36 @@ async function handleAssistant() {
 
   responseDiv.innerHTML = "Thinking...";
 
+  // Gemini API call
   const result = await fetch(
     "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=" + GEMINI_API_KEY,
     {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ contents: [{ parts: [{ text: input }] }] })
+      body: JSON.stringify({
+        contents: [{ parts: [{ text: input }] }]
+      })
     }
   );
 
   const data = await result.json();
-  const reply = data.candidates?.[0]?.content?.parts?.[0]?.text;
-  responseDiv.innerHTML = reply || "Sorry, something went wrong.";
-}
+  const reply = data.candidates?.[0]?.content?.parts?.[0]?.text || "Sorry, something went wrong.";
+
+  // Check for product suggestions
+  const matchedProducts = products.filter(product =>
+    input.toLowerCase().includes(product.name.toLowerCase()) ||
+    input.toLowerCase().includes(product.description.toLowerCase())
+  );
+
+  let productSuggestionHTML = "";
+  if (matchedProducts.length > 0) {
+    productSuggestionHTML = `<h4>🛍️ Based on your query, check this out:</h4>`;
+    matchedProducts.forEach(product => {
+      productSuggestionHTML += `
+        <div style="border:1px solid #ddd; padding:10px; margin-top:10px; border-radius:10px">
+          <img src="${product.image}" alt="${product.name}" style="width:100px; border-radius:8px;">
+          <p><strong>${product.name}</strong>: ${product.description}</p>
+          <a href="${product.availableOffline}" target="_blank">🛒 Check Offline Availability</a>
+        </div>`;
+    });
+  }

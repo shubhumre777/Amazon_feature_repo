@@ -72,30 +72,30 @@ const products = [
   },
   {
     name: "OnePlus Nord Buds 3",
-    image: "https://www.oneplus.in/product/oneplus-nord-buds-3",
+    image: "https://rukminim2.flixcart.com/image/850/1000/xif0q/headphone/r/3/g/-original-imah4d4k5s3wtupu.jpeg?q=90&crop=false",
     description: "Truly Wireless Bluetooth Earbuds with Active Noise Cancellation and 43H Playtime",
-    availableOffline: "https://maps.app.goo.gl/6YxVqz5v1Jkz3KjL9",
+    availableOffline: "https://maps.app.goo.gl/7oyi9VCFfCEY2cEt8",
     availableOnline: "https://www.amazon.in/dp/B0C9J2Y6Q4"
   },
   {
     name: "Noise Buds N1",
-    image: "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/BudsN1-Black01_600x.png",
+    image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.gonoise.com%2Fproducts%2Fnoise-buds-n1-truly-wireless-earbuds&psig=AOvVaw29Tn22GTvGiLc-2HXnx6WX&ust=1746383311940000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCOifmef2h40DFQAAAAAdAAAAABAR",
     description: "In-Ear True Wireless Earbuds with Chrome Finish and 40H Playtime",
-    availableOffline: "https://maps.app.goo.gl/6YxVqz5v1Jkz3KjL9",
+    availableOffline: "https://maps.app.goo.gl/tZUV3aPkuEgGSU9R9",
     availableOnline: "https://www.amazon.in/dp/B0CQJWMMG7"
   },
   {
     name: "HP H150 Wireless Earbuds",
     image: "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08397887.png",
-    description: "Wireless in-Ear Earbuds Compatible with Multiple Devices",
-    availableOffline: "https://maps.app.goo.gl/6YxVqz5v1Jkz3KjL9",
+    description: "https://in-media.apjonlinecdn.com/catalog/product/3/_/3_8_1.png",
+    availableOffline: "https://maps.app.goo.gl/4ixzoFB9mC2UVAn89",
     availableOnline: "https://www.amazon.in/dp/B0D7HYK4VV"
   },
   {
     name: "Apple AirPods Pro (2nd Generation)",
-    image: "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/airpods-pro-2nd-gen-hero-202209_FMT_WHH?wid=940&hei=1112&fmt=png-alpha&.v=1660803972361",
+    image: "https://www.apple.com/v/airpods-pro/m/images/meta/og__eui2mpgzwyaa_overview.png",
     description: "Active Noise Cancellation and Adaptive Transparency",
-    availableOffline: "https://maps.app.goo.gl/6YxVqz5v1Jkz3KjL9",
+    availableOffline: "https://maps.app.goo.gl/7sXt3LofpccSqRkv8",
     availableOnline: "https://www.amazon.in/dp/B0BDJ6K8D6"
   },
   {
@@ -113,39 +113,11 @@ const products = [
     "availableOnline": "https://www.amazon.in/dp/B0863TXGM3"
   },
   {
-    name: "Bose QuietComfort Earbuds II",
-    image: "https://assets.bose.com/content/dam/Bose_DAM/Web/consumer_electronics/global/products/headphones/quietcomfort_earbuds_ii/product_silo_images/qce_ii_black_EC_hero.psd/jcr:content/renditions/cq5dam.web.320.320.png",
-    description: "Personalized Noise Cancellation and High-Fidelity Audio",
-    availableOffline: "https://maps.app.goo.gl/6YxVqz5v1Jkz3KjL9",
-    availableOnline: "https://www.amazon.in/dp/B0B6Z2GQ5S"
-  },
-  {
     name: "JBL Tune 230NC TWS",
     image: "https://in.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw1d9c7a3a/JBL_Tune_230NC_TWS_Product_Image_Hero_Black.png",
     description: "Active Noise Cancelling Earbuds with 40H Battery Life",
     availableOffline: "https://maps.app.goo.gl/6YxVqz5v1Jkz3KjL9",
     availableOnline: "https://www.amazon.in/dp/B09QZ6J2ZP"
-  },
-  {
-    name: "Realme Buds Air 3",
-    image: "https://image01.realme.net/general/20220304/1646374259316.png",
-    description: "ANC Enabled Earbuds with 42dB Noise Cancellation",
-    availableOffline: "https://maps.app.goo.gl/6YxVqz5v1Jkz3KjL9",
-    availableOnline: "https://www.amazon.in/dp/B09V3JY5QG"
-  },
-  {
-    name: "Anker Soundcore Liberty Air 2 Pro",
-    image: "https://m.media-amazon.com/images/I/61+Q6Rh3OQL._SL1500_.jpg",
-    description: "True Wireless Earbuds with Targeted Active Noise Cancellation",
-    availableOffline: "https://maps.app.goo.gl/6YxVqz5v1Jkz3KjL9",
-    availableOnline: "https://www.amazon.in/dp/B08G4K8CY8"
-  },
-  {
-    name: "Sennheiser Momentum True Wireless 3",
-    image: "https://assets.sennheiser.com/img/16644/product_detail_x2_desktop_MTW3_black_front.png",
-    description: "Premium Sound with Adaptive Noise Cancellation",
-    availableOffline: "https://maps.app.goo.gl/6YxVqz5v1Jkz3KjL9",
-    availableOnline: "https://www.amazon.in/dp/B09V3JY5QG"
   }
 ];
 

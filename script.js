@@ -7,7 +7,7 @@ const products = [
   },
   {
     name: "USB-C Adapter",
-    image: "https://www.belkin.com/dw/image/v2/BGBH_PRD/on/demandware.static/-/Sites-master-product-catalog-blk/default/dw4cd20b4b/images/hi-res/8/24ab26877cf66a7a_AVI207-UsbC5in1Adapter-Front-Ortho-Webgg01.jpg?sw=700&sh=700",
+    image: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTcp76uMwx-Yl3WW47ET3PNJ0TvfNi5m15Uj-mwCZDNYs494i24OSixtGV8TM8tzk5CUgyYF0cI2o9u3bvXWILUQ2I6tfNJquUUP9ueVZ9KYRq1Kc5jQwv0",
     description: "Connect multiple devices",
     availableOffline: "https://www.croma.com/"
   },
@@ -31,19 +31,19 @@ const products = [
   },
   {
     name: "Smart Watch",
-    image: "https://m.media-amazon.com/images/I/61ZkF1qU+sL._AC_UF1000,1000_QL80_.jpg",
+    image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQSqe0_1U3Cg9y0YIXRx-4H8dSeUkdCtpNHxCHQer9pruODM5MwuWN9VQ9y4N7XFCZtP8AHpkU2wZqUd7xATSzB1F94UgpArKDqpds24CNnmD0iavogQcjO",
     description: "Track your fitness in style",
     availableOffline: "https://www.croma.com/"
   },
   {
     name: "Bluetooth Speaker",
-    image: "https://m.media-amazon.com/images/I/71cjS1A8sML._AC_SL1500_.jpg",
+    image: "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTNBd_jAqqdYf4mYUdNhQCbQUk3eObGuyHeUQ9Oj2dr0vPXfFm6aIhc0j20bG0YYKCqOuidK4ZumgjSMLiwXVJVzrTKknWCQxp8jsTIlyM5P65cLoM4Qw079A",
     description: "Portable sound companion",
     availableOffline: "https://www.reliancedigital.in/"
   },
   {
     name: "Laptop Stand",
-    image: "https://m.media-amazon.com/images/I/71LZfbD9oOL._SL1500_.jpg",
+    image: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTN2Uths8tmdH_IprYkuWdlUTHnjyI0gg1o2Rd1oBahbuJGUCXHf4pdb8wbaSXE_J_4d0t_-n5XMcQhaAMH0Hbafw5L44n5COQLaHPzNWPtLbPQ4BP0_IzR",
     description: "Ergonomic and foldable stand",
     availableOffline: "https://www.amazon.in/"
   }

@@ -79,14 +79,14 @@ const products = [
   },
   {
     name: "Noise Buds N1",
-    image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.gonoise.com%2Fproducts%2Fnoise-buds-n1-truly-wireless-earbuds&psig=AOvVaw29Tn22GTvGiLc-2HXnx6WX&ust=1746383311940000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCOifmef2h40DFQAAAAAdAAAAABAR",
+    image: "https://www.gonoise.com/cdn/shop/files/Slice_4_11cdef77-8ea4-4bd7-876a-eb4318af6864.webp?v=1708494131",
     description: "In-Ear True Wireless Earbuds with Chrome Finish and 40H Playtime",
     availableOffline: "https://maps.app.goo.gl/tZUV3aPkuEgGSU9R9",
     availableOnline: "https://www.amazon.in/dp/B0CQJWMMG7"
   },
   {
     name: "HP H150 Wireless Earbuds",
-    image: "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08397887.png",
+    image: "https://hpstorerajkot.com/wp-content/uploads/81bCIO4FzFL._SL1500_.jpg",
     description: "https://in-media.apjonlinecdn.com/catalog/product/3/_/3_8_1.png",
     availableOffline: "https://maps.app.goo.gl/4ixzoFB9mC2UVAn89",
     availableOnline: "https://www.amazon.in/dp/B0D7HYK4VV"
@@ -100,7 +100,7 @@ const products = [
   },
   {
     name: "Samsung Galaxy Buds2 Pro",
-    image: "https://images.samsung.com/is/image/samsung/p6pim/in/galaxy-buds2-pro-r510-sm-r510nzaainu-thumb-533x533.png",
+    image: "https://images.samsung.com/is/image/samsung/assets/in/2022-2h/galaxy-buds2-pro/galaxy-buds2-pro-color-view-white-mo.jpg",
     description: "Hi-Fi Sound Quality with Intelligent ANC",
     availableOffline: "https://maps.app.goo.gl/6YxVqz5v1Jkz3KjL9",
     availableOnline: "https://www.amazon.in/dp/B0B4F2TTTS"
@@ -114,7 +114,7 @@ const products = [
   },
   {
     name: "JBL Tune 230NC TWS",
-    image: "https://in.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw1d9c7a3a/JBL_Tune_230NC_TWS_Product_Image_Hero_Black.png",
+    image: "https://images-cdn.ubuy.co.in/65be3ad7f98bd35738718c4b-jbl-tune-230nc-tws-true-wireless.jpg",
     description: "Active Noise Cancelling Earbuds with 40H Battery Life",
     availableOffline: "https://maps.app.goo.gl/6YxVqz5v1Jkz3KjL9",
     availableOnline: "https://www.amazon.in/dp/B09QZ6J2ZP"

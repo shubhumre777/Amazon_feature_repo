@@ -19,6 +19,10 @@
 
     <div id="aiBox" class="ai-box card shadow-sm p-3">
       <h5>AI Assistant</h5>
+      <!-- 👇👇 Added aiWelcome div just below the heading -->
+      <div id="aiWelcome" class="ai-welcome hidden">
+        <span>Hye, How may I assist you?</span>
+      </div>
       <input type="text" id="assistantInput" class="form-control mb-2" placeholder="Ask something..." onkeypress="if(event.key==='Enter'){handleAssistant()}"/>
       <div id="assistantResponse" class="mt-2 text-dark"></div>
     </div>
@@ -35,5 +39,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
-    

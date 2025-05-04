@@ -2,9 +2,11 @@ body {
   font-family: Arial, sans-serif;
   background-color: #f2f2f2;
 }
+
 h1 {
   color: #232f3e;
 }
+
 .assistant-button {
   position: fixed;
   bottom: 20px;
@@ -19,9 +21,11 @@ h1 {
   align-items: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 .assistant-button img {
   margin-right: 5px;
 }
+
 .ai-box {
   position: fixed;
   bottom: 80px;
@@ -31,10 +35,12 @@ h1 {
   display: none;
   border-radius: 10px;
 }
+
 .card-img-top {
   height: 150px;
   object-fit: cover;
 }
+
 .popup {
   position: fixed;
   top: 20%;
@@ -46,19 +52,28 @@ h1 {
   padding: 20px;
   z-index: 1000;
   text-align: center;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   animation: popIn 0.5s ease-in-out;
 }
+
 .popup img.popper {
   width: 60px;
   margin-bottom: 15px;
 }
+
 .popup.hidden {
   display: none;
 }
+
 @keyframes popIn {
-  from { opacity: 0; transform: translate(-50%, -60%); }
-  to { opacity: 1; transform: translate(-50%, -50%); }
+  from {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
 }
 
 /* New styles for AI welcome bubble */
@@ -70,11 +85,12 @@ h1 {
   color: white;
   padding: 10px 15px;
   border-radius: 25px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   font-weight: bold;
   font-size: 14px;
   opacity: 0;
   transform: translateY(20px);
+  visibility: hidden; /* Added for smoother transition */
   transition: all 0.6s ease;
   z-index: 999;
 }
@@ -82,18 +98,16 @@ h1 {
 .ai-welcome.show {
   opacity: 1;
   transform: translateY(0);
+  visibility: visible; /* Ensure visibility when shown */
 }
 
-.hidden {
-  display: none;
-}
 .logo-bar {
   background-color: #ffcc00;
   padding: 10px 20px;
   text-align: left;
   display: flex;
   align-items: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   position: sticky;
   top: 0;
@@ -102,4 +116,3 @@ h1 {
 .logo-bar .logo-img {
   height: 40px;
 }
-

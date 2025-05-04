@@ -116,3 +116,26 @@ h1 {
 .logo-bar .logo-img {
   height: 40px;
 }
+.logo-bar {
+  background-color: #ffcc00;
+  padding: 10px 20px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 1000;
+  position: sticky;
+  top: 0;
+}
+
+.logo-bar .logo-img {
+  height: 40px;
+  margin-right: 15px;
+}
+
+.logo-bar .logo-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+

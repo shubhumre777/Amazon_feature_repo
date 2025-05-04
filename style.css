@@ -82,7 +82,7 @@ h1 {
   bottom: 90px;
   right: 80px;
   background: linear-gradient(135deg, #6f42c1, #9f7aea);
-  color: white;
+  color: black;
   padding: 10px 15px;
   border-radius: 25px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
@@ -96,7 +96,7 @@ h1 {
 }
 
 .ai-welcome.show {
-  opacity: 1;
+  opacity: 2;
   transform: translateY(0);
   visibility: visible; /* Ensure visibility when shown */
 }
